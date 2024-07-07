@@ -27,29 +27,6 @@ string summation(string a, string b) {
     if (sum[0] == '0')sum.erase(sum.begin());
     return sum;
  }
-std::string sum_strings(const std::string& a, const std::string& b) {
-    string sum, numbA = a, numbB = b;
-    bool lend = false;
-    numbA.insert(numbA.begin(), '0');
-    while (numbB.size() < numbA.size()) numbB.insert(numbB.begin(), '0');
-    while (numbA.size() < numbB.size()) numbA.insert(numbA.begin(), '0');
-    for (int i = numbA.size() - 1; i >= 0; i--) {
-        int ai = numbA[i] - '0';
-        int bi = numbB[i] - '0';
-        if (lend) {
-            ai++;
-            lend = false;
-        }
-        if (ai + bi < 10)sum.insert(sum.begin(), ai + bi + '0');
-        else {
-            ai -= 10;
-            lend = true;
-            sum.insert(sum.begin(), ai + bi + '0');
-        }
-    }
-    if (sum[0] == '0')sum.erase(sum.begin());
-    return sum;
-}
 
 string subtraction(string a, string b) {
     string difference;
