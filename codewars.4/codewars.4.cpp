@@ -4,7 +4,7 @@
 #include <cmath>
 using namespace std;
 
-string summation(string a, string b) {
+string summation(string a, string b) {  // Сумма
     string sum;
     bool lend = false;
     a.insert(a.begin(), '0');
@@ -28,7 +28,7 @@ string summation(string a, string b) {
     return sum;
  }
 
-string subtraction(string a, string b) {
+string subtraction(string a, string b) {  // Разность
     string difference;
     bool borrow = false;
     while (b.size() < a.size()) b.insert(b.begin(), '0');
@@ -58,7 +58,7 @@ string subtraction(string a, string b) {
     return difference;
 }
 
-int Compare(string numbA, string numbB) {
+int Compare(string numbA, string numbB) {  // Сравнение
     while (numbA.size() > 1 && numbA[0] == '0') {
         numbA.erase(numbA.begin());
     }
@@ -75,7 +75,7 @@ int Compare(string numbA, string numbB) {
     return numbA.size() > numbB.size() ? 1 : -1;
 }
 
-string multiply(string a, string b) {
+string multiply(string a, string b) {  // Произведение
     string numbA, numbB,res,prom; 
     bool lend = false;
     if (a.size() > b.size()) { numbA = a; numbB = b; }
@@ -115,7 +115,7 @@ string multiply(string a, string b) {
     return res=="" ? "0":res;
 }
 
-string divide_strings(const std::string& a, const std::string& b) {
+string divide_strings(const std::string& a, const std::string& b) {  // Частное
     if (a == "0" || b == "0") return "0";
     if (b == "1") return  a;
     if (a.size() < b.size()) return "0";
@@ -150,7 +150,7 @@ string divide_strings(const std::string& a, const std::string& b) {
     return quotient;
 }
 
-string integer_square_root(string n) {
+string integer_square_root(string n) {  // Квадратный корень
     string x0;
     long long sq = 0;
     int even = 0;
@@ -180,7 +180,7 @@ string integer_square_root(string n) {
     }
 }
 
-std::string factorial(int factorial) {
+std::string factorial(int factorial) {  // Факториал
     if (factorial <= 0)return "";
     string res="1";
     for (int i = 2; i < factorial+1; i++)
