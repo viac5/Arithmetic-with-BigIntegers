@@ -193,10 +193,5 @@ std::string factorial(int factorial) {
 
 int main()
 {
-   /* string a = "565", b = "5";
-    int c = sqrt(56989812812221285);
-    cout<<c<<"\n" << subtraction(a, b) << "\n" << summation(a, b) << "\n" << summation(a, b).size();
-    */
-   // integer_square_root("654684984516164684546516451354649879746546498984984949898798798746546549879845664987984654654");
-    cout << factorial(15);
+    cout << integer_square_root("654684984516164684546516451354649879746546498984984949898798798746546549879845664987984654654");
 }
